@@ -195,3 +195,41 @@ header {
     .projects-grid { grid-template-columns: 1fr; }
     .hero-bg-wave { clip-path: polygon(0 0, 100% 0, 100% 50%, 0 30%); }
 }
+/* --- ปุ่มกดนำทางในหน้า About --- */
+.about-action-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-primary-purple {
+    background: #4338ca;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(67, 56, 202, 0.25);
+    transition: background 0.2s;
+}
+
+.btn-primary-purple:hover {
+    background: #3730a3;
+}
+
+.btn-secondary-purple {
+    background: #f1f5f9;
+    color: #4338ca;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: background 0.2s;
+}
+
+.btn-secondary-purple:hover {
+    background: #e2e8f0;
+}
