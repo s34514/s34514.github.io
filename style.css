@@ -233,3 +233,82 @@ header {
 .btn-secondary-purple:hover {
     background: #e2e8f0;
 }
+/* --- เลย์เอาต์หน้า About --- */
+.about-content {
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    gap: 40px; /* ระยะห่างระหว่างรูปกับเนื้อหา */
+    margin-top: 20px;
+}
+
+/* ปรับขนาดรูปภาพโปรไฟล์ให้พอดี */
+.about-image {
+    flex: 0 0 280px; /* ล็อกความกว้างรูปที่ 280px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 280px;
+    height: 350px;
+    object-fit: cover; /* ครอปรูปให้ได้สัดส่วนสวยงาม */
+    border-radius: 16px; /* ปรับมุมโค้งมน */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); /* เพิ่มเงาให้นุ่มนวล */
+    border: 3px solid #ffffff;
+}
+
+/* ปรับส่วนฝั่งขวา (เนื้อหา) */
+.about-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* จัดสไตล์กล่องข้อความ */
+.about-box {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #4338ca; /* เพิ่มแถบสีม่วงด้านข้าง */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.about-box p {
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about-box strong {
+    color: #1e1b4b;
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดเล็ก (Mobile) */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* เปลี่ยนเป็นเรียงต่อกันในแนวตั้ง */
+        text-align: center;
+    }
+
+    .about-image {
+        flex: auto;
+    }
+
+    .about-image img {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%; /* ปรับเป็นรูปวงกลมเมื่อดูในมือถือ */
+    }
+
+    .about-box {
+        text-align: left;
+    }
+
+    .about-action-btns {
+        justify-content: center;
+    }
+}
